@@ -2,17 +2,17 @@
 
 namespace Database\Seeders;
 
-use App\Models\Job;
+use App\Models\Tag;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class JobSeeder extends Seeder
+class TagSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Job::factory(15)->create();
+        Tag::factory(2)->create();
     }
 }

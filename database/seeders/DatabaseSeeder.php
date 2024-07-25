@@ -2,8 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Employer;
-use App\Models\Tag;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -24,9 +22,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $this->call(JobSeeder::class);
-
-        Employer::factory(2)->create();
-
-        Tag::factory(2)->create();
+        // $this->call(EmployerSeeder::class);
+        // $this->call(TagSeeder::class);
     }
 }
