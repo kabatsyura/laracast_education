@@ -9,4 +9,20 @@ class Job extends Model
 {
     use HasFactory;
     protected $table = 'jobs_listing';
+
+    protected $fillable = [
+        'employer_id',
+        'title',
+        'salary'     
+    ];
+
+    public function employer()
+    {
+        return $this->belongsTo(Employer::class);
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class, foreignPivotKey: 'job_listing_id');
+    }
 }
